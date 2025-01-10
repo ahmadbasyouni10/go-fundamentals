@@ -63,6 +63,7 @@ func main() {
 	fmt.Println(myMap)
 
 	// to delete a key value pair
+	// delete by reference so no return value
 	delete(myMap, "one")
 	fmt.Println(myMap)
 
@@ -71,10 +72,51 @@ func main() {
 	fmt.Println(myMap2)
 
 	// to check if a key exists
-	value, exists := myMap2["Adam"]
+	value, exists := myMap2["Hey"]
 	if exists {
 		fmt.Println(value)
 	} else {
 		fmt.Println("Key does not exist")
+		fmt.Println(value)
+		fmt.Println(exists)
 	}
+
+	fmt.Println(intArr4)
+
+	// range is a keyword that allows you to iterate over a slice or a map
+	for index, value := range intArr4 {
+		fmt.Println(index, value)
+	}
+
+	for key, value := range myMap2 {
+		fmt.Println(key, value)
+	}
+	// to iterate over a map, the order is not guaranteed
+	for key, value := range myMap2 {
+		fmt.Println(key, value)
+	}
+
+	for i, v := range(intArr4) {
+		fmt.Println(i, v)
+	}
+
+	var i int = 0
+	for i < 10{
+		fmt.Println(i)
+		i += 1
+	}
+
+	var j int = 0
+	for {
+		if j >= 10 {
+			break
+		}
+		fmt.Println(j)
+		j += 1
+	}
+
+	for i:=0 ; i < 10; i++ {
+		fmt.Println(i)
+	}
+	
 }
